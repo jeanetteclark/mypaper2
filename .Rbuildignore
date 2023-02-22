@@ -1,3 +1,13 @@
+^renv$
+^renv\.lock$
 ^mypaper2\.Rproj$
 ^\.Rproj\.user$
 analysis
+^README\.Rmd$
+^README-.*\.png$
+^CONDUCT\.md$
+^CONTRIBUTING\.md$
+^\.binder/Dockerfile$
+^\.binder$
+^Dockerfile$
+^render-in-docker\.yaml$

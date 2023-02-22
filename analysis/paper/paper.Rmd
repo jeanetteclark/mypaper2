@@ -40,4 +40,14 @@ A list
 
 Here are two sample references: @Feynman1963118 [@Dirac1953888].
 
+```{r, echo = FALSE}
+library(dplyr)
+
+x <- data.frame(a = c(1, 2, 3))
+y <- data.frame(b = c(1, 2, 3))
+
+z <- bind_rows(x, y)
+```
+
+
 # References {#references .unnumbered}
