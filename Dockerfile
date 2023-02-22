@@ -14,8 +14,9 @@ RUN . /etc/environment \
   && sudo apt-get install libudunits2-dev -y \
   # build this compendium package
   && R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))" \
-  && R -e "remotes::install_github(c('rstudio/renv', 'quarto-dev/quarto-r'))" \
+  && R -e "remotes::install_github(c('rstudio/renv'))" \
+  && R -e "install.packages(c('rmarkdown'))" \
   # install pkgs we need
   && R -e "renv::restore()" \
   # render the manuscript into a pdf,
-  && R -e "quarto::quarto_render('/mypaper2/analysis/paper/paper.rmd')"
+  && R -e "rmarkdown::render('/mypaper2/analysis/paper/paper.rmd')"
