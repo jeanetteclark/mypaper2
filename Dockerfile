@@ -19,4 +19,4 @@ RUN . /etc/environment \
   # install pkgs we need
   && R -e "renv::restore()" \
   # render the manuscript into a pdf,
-  && R -e "rmarkdown::render('/mypaper2/analysis/paper/paper.rmd')"
+  && R -e "rmarkdown::render('mypaper2/analysis/paper/paper.Rmd')"
