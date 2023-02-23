@@ -8,6 +8,7 @@ COPY --chown=${NB_USER} . ${HOME}
 
 USER ${NB_USER}
 
-RUN wget https://github.com/jeanetteclark/mypaper2/raw/main/DESCRIPTION && R --vanilla -s -e "options(repos = list(CRAN = 'http://cran.rstudio.com'));  install.packages('renv'); renv::restore()"
+RUN wget https://github.com/jeanetteclark/mypaper2/raw/main/DESCRIPTION
+RUN R --vanilla -s -e "options(repos = list(CRAN = 'http://cran.rstudio.com'));  install.packages('renv'); renv::restore()"
 
 RUN rm DESCRIPTION.1; exit 0
