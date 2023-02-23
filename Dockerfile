@@ -14,7 +14,7 @@ RUN . /etc/environment \
   && sudo apt-get install libudunits2-dev -y \
   # build this compendium package
   && R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))" \
-  && R -e "install.packages(c('renv, 'rmarkdown'))" \
+  && R -e "install.packages(c('renv', 'rmarkdown'))" \
   # install pkgs we need
   && R -e "renv::restore()" \
   # render the manuscript into a pdf,
